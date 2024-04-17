@@ -11,10 +11,8 @@ public class TelephoneBook {
     }
 
     private static void printTelephoneBook(TreeMap<TelephoneNumber, TelephoneEntry> contactList) {
-        Iterator<Map.Entry<TelephoneNumber, TelephoneEntry>> iterator = contactList.entrySet().iterator();
 
-        while (iterator.hasNext()) {
-            Map.Entry<TelephoneNumber, TelephoneEntry> entry = iterator.next();
+        for (Map.Entry<TelephoneNumber, TelephoneEntry> entry : contactList.entrySet()) {
             System.out.println(entry.getValue().description());
         }
     }
